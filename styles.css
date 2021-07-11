@@ -1,0 +1,822 @@
+body,
+html {
+   height: 100%;
+   color: white;
+   font-family: 'Spinnaker', sans-serif;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+@font-face {
+   font-family: Avenir;
+   src: url(avenir-font-files/Metropolis-ExtraLight.otf);
+}
+
+.home {
+   background: url('home-background.png') no-repeat fixed top left;
+   background-size: cover;
+   height: 85vh;
+   padding-top: 132px;
+   /*height of the navbar + 50px */
+}
+
+nav {
+   z-index: 1;
+   width: 100%;
+   height: 82px;
+   /*calculated after li elements were added */
+   position: fixed;
+   top: 0;
+   background-color: rgb(48, 43, 112);
+   display: flex;
+   justify-content: space-between;
+   padding: 0 14%;
+   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.644);
+}
+
+ul {
+   list-style-type: none;
+   font-weight: bold;
+   display: flex;
+}
+
+ul li a {
+   text-decoration: none;
+   display: inline-block;
+   color: inherit;
+   padding: 31px 28px;
+}
+
+.content {
+   display: flex;
+   justify-content: space-between;
+   padding: 0 20%;
+   height: 75vh;
+}
+
+
+.content-left {
+   flex: 0 1 70%;
+   display: flex;
+   flex-flow: column nowrap;
+}
+
+.content-right {
+   flex: 0 1 auto;
+}
+
+/* .content-left>div{
+   /* background-color: rgba(128, 128, 128, 0.678);
+   border:1px solid black; */
+.reset-flex-defaults {
+   min-width: 0;
+   min-height: 0;
+   overflow: hidden;
+}
+
+/* .content-left>div {
+   min-width: 0;
+   min-height: 0;
+   overflow: hidden;
+} */
+
+.text1 {
+   font-size: 3em;
+   margin-top: 10%;
+}
+
+.sub-text1 {
+   font-size: 3em;
+
+}
+
+.text2 {
+   margin-top: 3%;
+}
+
+.text3 {
+   font-size: 1.6em;
+   margin-top: 10%;
+}
+
+.text4 {
+   margin-top: 3%;
+   color: rgb(48, 43, 112);
+}
+
+.text5 {
+   margin-top: 5%;
+}
+
+.text5 img {
+   max-width: 25%;
+   /* height: 100%; */
+   /* width: 100%; */
+   margin: 0 1%;
+   overflow: hidden;
+}
+
+.content-right img {
+   /* width: 100%; */
+   max-width: 360px;
+   margin-left: 8%;
+   height: 100%;
+}
+
+/* -------------------------Ghost page----------- */
+.ghost-page {
+   display: none;
+   height: 75vh;
+   background-color: white;
+}
+
+/* --------------------page2 ------------------- */
+
+.page2,
+.page4 {
+   background-color: white;
+   color: black;
+   margin-top: 3%;
+   padding: 0 16%;
+   display: flex;
+}
+
+.page2 {
+   height: 60vh;
+}
+
+.page2-left {
+   flex: 0 1 60%;
+}
+
+.page2-left img {
+   width: 100%;
+}
+
+.page2-right {
+   flex: 0 1 40%;
+   padding-top: 7%;
+}
+
+.page2-right h1 {
+   font-size: 3em;
+   font-weight: 400;
+   color: rgb(48 43 112);
+   margin-bottom: 7%;
+}
+
+.page2-right>div {
+   font-size: 0.9em;
+   font-family: Avenir;
+   line-height: 1.5em;
+   color: #302B70;
+}
+
+
+/* ------------ page 3------------------ */
+
+.page3 {
+   height: 120vh;
+   background: url('page3-background.png') no-repeat scroll center;
+   background-size: cover;
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: space-evenly;
+   align-items: center;
+   text-align: center;
+   padding: 3% 20%;
+}
+
+.page3-col-1 {
+   padding: 0 20%;
+}
+
+.page3-col-1 h1 {
+   font-size: 2.8em;
+   font-weight: 300;
+   margin-bottom: 2%;
+}
+
+.page3-col-1 p {
+   font-family: Avenir;
+   font-size: 0.85em;
+   line-height: 1.5em;
+}
+
+.page3-col-2 {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-around;
+}
+
+.page3-col-2 img {
+   width: 100%;
+   height: 100%;
+}
+
+.page3-col-3 .one {
+   margin-top: 0;
+}
+
+.page3-col-3 .two {
+   color: #787cd1;
+}
+
+.page3-col-3 .three img {
+   width: 130%;
+   height: 130%;
+}
+
+
+/* ------------ page 4 ---------------- */
+
+/* see .page2 */
+.page4 {
+   height: 190vh;
+   flex-flow: column nowrap;
+   align-items: center;
+   /* justify-content: center; */
+   padding: 0 20%;
+
+}
+
+.page4>div {
+   /*col 1,2,3*/
+   display: flex;
+   flex-flow: row nowrap;
+   align-items: center;
+}
+
+.page4-col-1 {
+   margin-top: 4%;
+}
+
+.page4-col-0 {
+   font-size: 3.2em;
+   color: #302B70;
+   /* padding-bottom: 30%; */
+}
+
+.page4>div>.text {
+   flex: 0 1 35%;
+   font-size: 0.87em;
+   color: #302B70;
+}
+
+.page4>div>.image {
+   flex: 0 1 65%;
+}
+
+.page4>div>.image img {
+   width: 100%;
+   height: 100%;
+}
+
+.page4 .text h1 {
+   position: relative;
+   padding-bottom: 10%;
+}
+
+.page4 .text div {
+   font-family: Avenir;
+   line-height: 1.5em;
+}
+
+.page4 .text .underline {
+   position: absolute;
+   bottom: 33%;
+   left: 0;
+   height: 2.5px;
+   width: 72%;
+   background-color: rgb(120, 124, 209);
+}
+
+
+/* --------------- page 5---------------- */
+
+.page5 {
+   height: 90vh;
+   background: url('home-background.png') no-repeat scroll center;
+   background-size: cover;
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+   /* padding: 3% 17.5%; */
+   padding: 3% 14%;
+   justify-content: space-evenly;
+   /* text-align: center; */
+}
+
+.page5-col-1 {
+   font-size: 3.2em;
+}
+
+.page5-col-2 {
+   flex: 0 1 65%;
+   margin-top: 5%;
+   display: flex;
+   flex-flow: row nowrap;
+   /* justify-content: space-between; */
+}
+
+.card {
+   font-size: 0.95em;
+   background-color: white;
+   flex: 1 1 0;
+   margin: 1.5%;
+   color: black;
+   text-overflow: ellipsis;
+   height: 450px;
+   box-shadow: 0 0 1px black;
+}
+
+
+.card img {
+   width: 100%;
+   height: 46%;
+}
+
+.card div {
+   font-size: 0.8em;
+   font-family: Avenir;
+   padding: 10%;
+   line-height: 1.55em;
+   letter-spacing: 0.5px;
+}
+
+.card .date {
+   margin-bottom: 5%;
+}
+
+.card .title {
+   font-size: 1.6em;
+   margin: 5% 0;
+}
+
+.card .txt {
+   font-size: 1.1em;
+}
+
+/* ------------- footer ------------- */
+
+footer {
+   height: 65vh;
+   background-color: rgb(48, 43, 112);
+   display: flex;
+   justify-content: space-between;
+   padding: 4% 16%;
+   font-family: Avenir;
+}
+
+.footer-col-1 {
+   flex: 1 1 45%;
+}
+
+.footer-col-2 {
+   flex: 1 1 30%;
+}
+
+.footer-col-3 {
+   flex: 1 1 25%;
+}
+
+footer h1 {
+   margin-bottom: 8%;
+   /* font-weight: 300; */
+}
+
+::placeholder {
+   color: inherit;
+   font-size: 1.06em;
+}
+
+#message {
+   height: 80%;
+   font-family: Avenir;
+   resize: none;
+}
+
+form input,
+#message {
+   background-color: inherit;
+   width: 75%;
+   border: none;
+   color: white;
+   border-bottom: 1px solid white;
+   padding: 18px 0 5px 10px;
+}
+
+span.btn {
+   display: inline-block;
+   font-size: 0.95em;
+   font-weight: bold;
+   padding: 5px 25px;
+   margin: 3% 0;
+   border: 1px solid white;
+   border-radius: 5px;
+}
+
+.footer-col-1 span {
+   margin-left: 50%;
+}
+
+.footer-col-2 {
+   position: relative;
+}
+
+.footer-col-2 span {
+   width: 65%;
+   text-align: center;
+}
+
+.footer-col-2 h2 {
+   margin-top: 25%;
+}
+
+.footer-col-2 img {
+   width: 41%;
+}
+
+.footer-col-3 span {
+   font-size: 0.78em;
+   display: inline-block;
+   padding: 3% 0;
+}
+
+.footer-col-3 img {
+   width: 25%;
+   margin-right: 5%;
+}
+
+/* --------------- Queries -------------- */
+
+
+/*  1032 and down 
+(a little above 992)*/
+
+@media only screen and (max-width:1032px) {
+
+   .ghost-page {
+      display: block;
+   }
+
+   ul {
+      display: none;
+   }
+
+   .content {
+      flex-flow: row wrap;
+      height: 115vh;
+      justify-content: center;
+      align-items: center;
+      color: black;
+   }
+
+   .content-left,
+   .content-right {
+      flex: 0 1 100%;
+   }
+
+   /*bottom*/
+   .content-left {
+      /* height: 40%; */
+      /* base font size */
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1.45em;
+      order: 2;
+      /* font-size: em; */
+   }
+
+   .text1 {
+      margin-top: 4%;
+      line-height: 1.1em;
+      font-size: 2.8em;
+   }
+
+   .sub-text1 {
+      /* font-size: 3.5em; */
+      font-size: 2.8em;
+      line-height: 1.1em;
+      color: black;
+   }
+
+   .text2 {
+      margin-top: 4%;
+   }
+
+   .text3 {
+      margin-top: 3%;
+   }
+
+   .text4 {
+      font-size: 0.8em;
+      margin-top: 1%;
+   }
+
+   .text5 {
+      margin-top: 3%;
+   }
+
+   .text5 img {
+      /* height: 200%; */
+      width: 100%;
+   }
+
+   /* top */
+   .content-right {
+      text-align: center;
+      order: 1;
+      height: 66%;
+   }
+
+   .content-right img {
+      margin: 0;
+      min-width: 70%;
+   }
+
+   /* ------------- page2 ---------------- */
+   .page2 {
+      font-size: 0.88em;
+      padding: 0 13%;
+   }
+
+   /* --------------- page 3------------ */
+   .page3 {
+      font-size: 0.95em;
+      padding: 3% 12%;
+   }
+
+   /* ------------- page4 ---------------- */
+   .page4 {
+      font-size: 0.88em;
+      padding: 3% 16%;
+   }
+
+   .page4-col-1 {
+      margin-top: 8%;
+   }
+
+   /* ------------- page5 ---------------- */
+   .page5 {
+      height: 155vh;
+      font-size: 0.9em;
+      padding: 3% 10%;
+   }
+
+   .page5-col-2 {
+      flex-flow: row wrap;
+   }
+
+   .card {
+      margin: 2.5%;
+   }
+
+   .flex1 {
+      margin-left: 28%;
+      margin-right: 28%;
+      flex: 1 1 60%;
+   }
+
+   .flex2,
+   .flex3 {
+      flex: 1 1 40%;
+   }
+
+   /* ------------- footer ------------ */
+   footer,
+   ::placeholder {
+      font-size: 0.81em;
+      padding: 4% 9%;
+   }
+
+   form input {
+      padding: 12px 0 5px 0px;
+   }
+
+   .footer-col-1 span {
+      margin-left: 41%;
+   }
+
+   /* .footer-col-2 h2{
+      margin-top: 52%;
+   } */
+}
+
+
+
+/* --------620px and down----------- */
+
+@media screen and (max-width:620px) {
+
+   .ghost-page {
+      height: 55vh;
+   }
+
+   .content {
+      height: 103vh;
+   }
+
+   .content-right img {
+      margin: 0;
+      height: 100%;
+      /* object-fit: cover;
+      object-position: bottom; */
+   }
+
+   /* bottom*/
+   .content-left {
+      font-size: 0.99em;
+   }
+
+   /* ------------- page 2----------------*/
+
+   .page2 {
+      font-size: 0.8em;
+      height: 80vh;
+      flex-flow: row wrap;
+   }
+
+   .page2-left {
+      padding-top: 4%;
+   }
+
+   .page2-left,
+   .page2-right {
+      flex: 0 1 100%;
+   }
+
+   .page2-right {
+      margin-top: -10%;
+   }
+
+
+   /* --------------- page 3 ------------ */
+   .page3 {
+      font-size: 0.9em;
+      padding: 1.5% 8%;
+   }
+
+   /* --------------- page 4 ------------ */
+
+   .page4 {
+      height: 230vh;
+   }
+
+   .page4>div {
+      flex-flow: row wrap;
+      margin: 5%;
+   }
+
+   .page4>div>.text,
+   .page4>div>.image {
+      flex: 0 1 100%;
+   }
+
+   .page4-col-1 .text,
+   .page4-col-3 .text {
+      order: 2;
+   }
+
+   /* --------------- page 5 ------------ */
+   .page5 {
+      font-size: 0.85;
+      height: 220vh;
+   }
+
+   .page5-col-2 {
+      margin-top: 8%;
+   }
+
+   .card {
+      flex: 1 1 100%;
+      margin: 5% 10%;
+   }
+
+   /* ------------- footer ------------ */
+
+   footer {
+      flex-flow: row wrap;
+      height: 150vh;
+      padding: 10% 12%;
+      justify-content: center;
+      text-align: center;
+   }
+
+   #message{
+      height: 70%;
+   }
+   .footer-col-1,
+   .footer-col-2,
+   .footer-col-3 {
+      flex: 0 1 100%;
+   }
+
+   footer h1 {
+      font-size: 2.1em;
+      margin-bottom: 4%;
+   }
+   form input{
+      padding: 18px 0 5px 0px;
+      /* margin-left: -10px; */
+   }
+
+   .footer-col-2 img {
+      width: 25%;
+   }
+}
+
+/* ---------below 430 ----------- */
+
+@media screen and (max-width:430px) {
+   .ghost-page {
+      height: 35vh;
+   }
+
+   .content {
+      padding: 0 4%;
+   }
+
+   .content-left {
+      font-size: 0.7em;
+   }
+
+   /* -------------- page 2 ------------- */
+
+   .page2 {
+      font-size: 0.7em;
+   }
+
+   .page2-left {
+      padding-top: 20%;
+   }
+
+   .page2-right {
+      margin-top: -20%;
+   }
+
+   /* ------------- page 3 ------------- */
+   .page3 {
+      height: 100vh;
+      font-size: 0.8em;
+      justify-content: space-around;
+      /*not working*/
+   }
+
+   .page3-col-1 {
+      padding: 0 10%;
+   }
+
+   .page3-col-2 {
+      margin-top: -40%;
+   }
+
+   .page3-col-3 {
+      margin-top: -40%;
+   }
+
+   /* ------------- page 4 ------------- */
+
+   .page4 {
+      font-size: 0.8em;
+      text-align: center;
+      height: 200vh;
+   }
+
+   .page4 .text .underline {
+      width: 65.5%;
+      left: 18%
+   }
+
+   .page4 .page4-col-2 .underline {
+      width: 42%;
+      left: 30%;
+   }
+
+   .page4 .page4-col-3 .underline {
+      width: 42%;
+      left: 29%;
+   }
+
+   /* ------------- page 5 ------------- */
+
+   .page5 {
+      font-size: 0.8em;
+      padding: 1% 10%;
+      height: 220vh;
+   }
+
+   .card {
+      height: 350px;
+   }
+
+   /* ----------footer----------- */
+   #message{
+      height: 65%;
+   }
+}
