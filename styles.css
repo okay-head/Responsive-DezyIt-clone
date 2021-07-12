@@ -109,21 +109,24 @@ ul li a:hover{
    font-weight: 300;
    width: 100%;
    position: absolute;
+   left: 0;
    top: 81px;
    background-color: rgb(48, 43, 112);
    flex-flow: column nowrap;
    text-align: center;
    transition: 0.3s ease opacity, 0.3s ease;
+   /* border-top: 0.1px solid rgba(255, 255, 255, 0.431); */
+   border-top: 0.1px solid black;
 }
 .collapsed-nav li{
    border-bottom: 0.1px solid black;
    flex: 1 1 100%;
 }
 .collapsed-nav li:last-child{
-   border-bottom: 1px solid rgba(255, 255, 255, 0.774);
+   border-bottom: 0.4px solid rgba(255, 255, 255, 0.685);
 }
 .collapsed-nav li a {
-   /* padding: 20px 28px; */
+   padding: 25px 28px;
    width: 100%;
 }
 .active{
@@ -554,7 +557,7 @@ span.btn:hover{
       display: block;
    }
 
-   nav ul {
+   nav ul.main {
       display: none;
    }
    #hamburger{

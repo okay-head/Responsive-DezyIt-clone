@@ -49,6 +49,7 @@ const array2 = [...underline];
 
 window.onscroll = function change() {
 
+   // loop for img scale-in
    array1.forEach(element => {
       if (window.scrollY>offset(element)-550) {
          replace(element,'scale','scale-in');
@@ -56,6 +57,7 @@ window.onscroll = function change() {
    }
    });   
 
+   // loop for underline
    array2.forEach(element => {
       if (window.scrollY>offset(element)-500) {
          replace(element,'scaleX','scaleX-in');
