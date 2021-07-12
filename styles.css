@@ -465,7 +465,7 @@ ul li a:hover{
 /* ------------- footer ------------- */
 
 footer {
-   height: 65vh;
+   height: 70vh;
    background-color: rgb(48, 43, 112);
    display: flex;
    justify-content: space-between;
