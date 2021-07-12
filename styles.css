@@ -116,6 +116,7 @@ ul li a {
    display: inline-block;
    color: inherit;
    padding: 31px 28px;
+   transition: 0.4s ease color;
 }
 ul li a:hover{
    color: rgb(241, 160, 66);
