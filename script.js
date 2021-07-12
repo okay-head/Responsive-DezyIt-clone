@@ -75,7 +75,7 @@ const page3Gallery ={
       // ...
 
       //if i =5 */
-      reset();
+      // reset();
    // }
 
 
