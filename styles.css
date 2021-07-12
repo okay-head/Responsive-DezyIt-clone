@@ -3,6 +3,7 @@ html {
    height: 100%;
    color: white;
    font-family: 'Spinnaker', sans-serif;
+   scroll-behavior: smooth;
 }
 
 * {
@@ -122,6 +123,9 @@ ul li a:hover{
    color: rgb(241, 160, 66);
 }
 
+.active{
+   color: rgb(241, 160, 66);
+}
 .collapsed-nav{
    font-weight: 300;
    width: 100%;
@@ -145,9 +149,6 @@ ul li a:hover{
 .collapsed-nav li a {
    padding: 25px 28px;
    width: 100%;
-}
-.active{
-   color: rgb(241, 160, 66);
 }
 .content {
    display: flex;
@@ -336,12 +337,17 @@ ul li a:hover{
 
 /* see .page2 */
 .page4 {
+   position: relative;
    height: 190vh;
    flex-flow: column nowrap;
    align-items: center;
    /* justify-content: center; */
    padding: 0 20%;
+}
 
+span#Why-us{
+   position: absolute;
+   top: -7%;
 }
 
 .page4>div {
@@ -408,7 +414,13 @@ ul li a:hover{
    /* padding: 3% 17.5%; */
    padding: 3% 14%;
    justify-content: space-evenly;
+   position: relative;
    /* text-align: center; */
+}
+
+span#Blogs{
+   position: absolute;
+   top: -8%;
 }
 
 .page5-col-1 {
@@ -683,7 +695,9 @@ span.btn:hover{
       font-size: 0.9em;
       padding: 3% 10%;
    }
-
+   span#Blogs{
+      top: -6%;
+   }
    .page5-col-2 {
       flex-flow: row wrap;
    }
@@ -805,6 +819,10 @@ span.btn:hover{
       height: 220vh;
    }
 
+   span#Blogs{
+      top: -4%;
+   }
+
    .page5-col-2 {
       margin-top: 8%;
    }
@@ -904,6 +922,10 @@ span.btn:hover{
       height: 200vh;
    }
 
+   span#Why-us{
+      position: absolute;
+      top: -5%;
+   }
    .page4 .text .underline {
       width: 65.5%;
       left: 18%

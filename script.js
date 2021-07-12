@@ -12,6 +12,7 @@ const ourProduct = document.querySelector('.page3');
 const whyUs = document.querySelector('.page4');
 const blogs = document.querySelector('.page5');
 const contact = document.querySelector('footer');
+const navButtons = document.querySelectorAll('ul li a');
 
 const homeGallery = {
    image1:'images/home-gallery/DezyIt-Home-Mockup.png',
@@ -82,11 +83,22 @@ const page3Gallery ={
 // initializations
 function init(element,eclass) {
    element.classList.add(eclass);
-}
+};
 function replace(element,rclass,aclass) {
    element.classList.remove(rclass);
    element.classList.add(aclass);
-}
+};
+
+function changeColor() {
+   // console.log(this);
+   navButtons.forEach(xelement => {
+      if (xelement.classList.contains('active')) {
+         xelement.classList.remove('active');
+      }
+   });
+   // active is assigned to click element
+   this.classList.add('active');
+};
 
 init(hiddenNavbar,'opacity');
 init(hiddenNavbar,'display-none');
@@ -128,14 +140,23 @@ hamburger.addEventListener('click',function () {
       hiddenNavbar.classList.toggle('opacity');
       hiddenNavbar.classList.toggle('display-none');
    }, 100);
-})
+});
 
-// fade in animations
+
+// navigation active page
+
+navButtons.forEach(element => {
+   element.addEventListener('click',changeColor.bind(element));
+   // now the function's this keyword points to the element which triggered the eventListener
+});
+
+
+// fade in animation
 
 function offset(element) {
    const x = Math.round(window.scrollY + element.getBoundingClientRect().top);
    return x;
-}
+};
 
 let array1 = [page2img,page4img[0],page4img[1],page4img[2]];
 let array2 = [...underline];
