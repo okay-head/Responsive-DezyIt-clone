@@ -1,4 +1,4 @@
-## Checkout site [here](https://okay-head.github.io/Responsive-DezyIt-clone/)
+>## Checkout site [here](https://okay-head.github.io/Responsive-DezyIt-clone/)
 
 
 * _Responsive_ : Works on different screen sizes, try resizing your browser window
