@@ -14,6 +14,8 @@ const blogs = document.querySelector('.page5');
 const contact = document.querySelector('footer');
 const navButtons = document.querySelectorAll('ul li a');
 
+let startPage3Slideshow = false;
+
 const homeGallery = {
    image1:'images/home-gallery/DezyIt-Home-Mockup.png',
    image2:'images/home-gallery/Design Thinking Sprint - Centre3.png',
@@ -29,55 +31,29 @@ const page3Gallery ={
    set3:['images/page-3-gallery/page3-set-3-img-1.png','images/page-3-gallery/page3-set-3-img-2.png','images/page-3-gallery/page3-set-3-img-3.png'],
 };
 
-// function homePageSlideshow(source){
-//    window.setInterval(() => {
-//       homeImage.setAttribute('src',source);
-//       // console.log(source);
+   //home page slideshow
+
+   function homePageSlideshow() {
+
+      Object.values(homeGallery).forEach((element, index) => {
+         window.setTimeout(() => {
+            // changing the src attribute
+            homeImage.setAttribute('src',element);
+         }, 4000 * index);
+      });
+   };
       
-//    }, 1000);
-// }
+      
+   // call the fn once then after every 9000ms
+   homePageSlideshow();
 
-// window.setInterval(() => {
-//    let i =0;
-// for (let i = 1; i < 5; i++) {
-//    homePageSlideshow(homeGallery[`image${i}`]);
-// }
-// }, 5000);
+   window.setInterval(homePageSlideshow,18000);
 
-   // if (i==4) {
-   //    i=0;
-   //    continue;
-   // }
-   
- /*   let i =0;
 
-   function increase(){
-      i++;
-      return i;
-   }
-   function reset(){
-      i=0;
-      return i;
-   }
+// page3 slideshow 
 
-   function fn() {
-      let value = 1;
-      while (value<=4) {
-         value =  window.setTimeout(increase,2000);
-         let source = homeGallery[`image${value}`];
-         homeImage.setAttribute('src',source);
-         
-      } */
-
-    /*   //after 2sec
-      increase();
-      //after 2sec
-      increase();
-      // ...
-
-      //if i =5 */
-      // reset();
-   // }
+      page3Slideshow();
+      window.setInterval(page3Slideshow,18000);
 
 
 // initializations
@@ -117,7 +93,7 @@ page3img.forEach(element => {
    init(element,'fade-up');
 });
 
-// init(homeImage,'fade-right');
+// init(homeImage,'fade-right');    initialised class in the css since js takes time to load
 
 // slide in animation onload
 
@@ -190,8 +166,36 @@ window.onscroll = function change() {
          replace(element,'fade-up','fade-up-in');
          // array3.shift(); !array still in memory
    }
-   });   
-   
+   });  
+
+   // if (window.scrollY>1190) {
+   //    startPage3Slideshow = true;
+   // }
+}
+
+// need to write this fn outside onscroll 
+function page3Slideshow() {
+
+      Object.values(page3Gallery).forEach((element, index) => {
+         window.setTimeout(() => {
+            // changing the src attribute
+            // console.log(page3img[0],element[0]);
+            // console.log(page3img[1],element[1]);
+            // console.log(page3img[2],element[2]);
+            page3img[0].setAttribute('src',element[0]);
+            page3img[1].setAttribute('src',element[1]);
+            page3img[2].setAttribute('src',element[2]);
+         }, 4000 * index);
+      });
+   }
+
+   //when page3 images get loaded
+   /* if (startPage3Slideshow) {
+      page3Slideshow();
+      window.setInterval(page3Slideshow,18000);
+   }; */
+      
+
    // To change active class of elements in navbar depending on the page position
    //array elements won't be discarded since need to check with every scroll
 
@@ -203,8 +207,4 @@ window.onscroll = function change() {
    // });
 
 
-
-
-
-}
 
